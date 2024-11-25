@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/intranet-core-apim/apis/rvc-intranet4-api-core",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/rvc-recursos/databases/Intranet4",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:Intranet4"
+    },
+    "mssql2": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/rvc-recursos/databases/Intranet4Dev",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:Intranet4Dev"
+    }
+  }
+}

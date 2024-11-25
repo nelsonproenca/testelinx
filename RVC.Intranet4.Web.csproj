@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+	<PreserveCompilationContext>false</PreserveCompilationContext>
+	<GenerateDocumentationFile>False</GenerateDocumentationFile>
+	<UserSecretsId>5a066063-d8f6-4282-bcff-50e75a89b394</UserSecretsId>	  
+  </PropertyGroup>
+
+	<Import Project="..\..\Build\RVC.Intranet4.Build.proj" />
+
+	<ItemGroup>
+	  <Compile Remove="Controllers\Funcionarios\FuncionarioDetalheController.cs" />
+	  <Compile Remove="Controllers\Funcionarios\FuncionarioDocumentoController.cs" />
+	</ItemGroup>	
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.28" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.28" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Autenticacao\RVC.Intranet4.Autenticacao.Dic\RVC.Intranet4.Autenticacao.Dic.csproj" />
+    <ProjectReference Include="..\..\Avaliacoes\RVC.Intranet4.Avaliacoes.Dic\RVC.Intranet4.Avaliacoes.Dic.csproj" />
+    <ProjectReference Include="..\..\Clientes\RVC.Intranet4.Clientes.Dic\RVC.Intranet4.Clientes.Dic.csproj" />
+    <ProjectReference Include="..\..\Core\RVC.Intranet4.Core.Dic\RVC.Intranet4.Core.Dic.csproj" />
+    <ProjectReference Include="..\..\Escritorios\RVC.Intranet4.Escritorios.Dic\RVC.Intranet4.Escritorios.Dic.csproj" />
+    <ProjectReference Include="..\..\Financeiros\RVC.Intranet4.Financeiros.Dic\RVC.Intranet4.Financeiros.Dic.csproj" />
+    <ProjectReference Include="..\..\Funcionarios\RVC.Intranet4.Funcionarios.Dic\RVC.Intranet4.Funcionarios.Dic.csproj" />
+    <ProjectReference Include="..\..\Legados\RVC.Intranet4.Legados.Dic\RVC.Intranet4.Legados.Dic.csproj" />
+    <ProjectReference Include="..\..\Menus\RVC.Intranet4.Menus.Dic\RVC.Intranet4.Menus.Dic.csproj" />
+    <ProjectReference Include="..\..\Pipelines\RVC.Intranet4.Pipelines.Dic\RVC.Intranet4.Pipelines.Dic.csproj" />
+    <ProjectReference Include="..\..\Programacoes\RVC.Intranet4.Programacoes.Dic\RVC.Intranet4.Programacoes.Dic.csproj" />
+    <ProjectReference Include="..\..\Shared\RVC.Intranet4.Shareds.Dic\RVC.Intranet4.Shareds.Dic.csproj" />
+    <ProjectReference Include="..\..\TimeSheet\RVC.Intranet4.TimeSheets.Dic\RVC.Intranet4.TimeSheets.Dic.csproj" />
+    <ProjectReference Include="..\..\Treinamentos\RVC.Intranet4.Treinamentos.Dic\RVC.Intranet4.Treinamentos.Dic.csproj" />
+    <ProjectReference Include="..\..\Aprovacoes\RVC.Intranet4.Aprovacoes.Dic\RVC.Intranet4.Aprovacoes.Dic.csproj" />
+  </ItemGroup>
+
+</Project>
